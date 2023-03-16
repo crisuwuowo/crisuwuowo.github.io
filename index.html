@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>creo que sos homosexual</title>
+	<meta charset="UTF-8">
+	<style>
+		/* Estilos CSS para el botón */
+		button {
+			position: relative;
+			left: 0;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- Código HTML para el botón -->
+	<button onmouseover="moverBoton()">si no me apretas sos homosexual</button>
+	
+	<!-- Código JavaScript para mover el botón -->
+	<script>
+		function moverBoton() {
+			// Obtener el ancho y la altura del botón
+			var boton = document.querySelector("button");
+			var botonAncho = boton.offsetWidth;
+			var botonAlto = boton.offsetHeight;
+
+			// Obtener el ancho y la altura de la ventana
+			var ventanaAncho = window.innerWidth;
+			var ventanaAlto = window.innerHeight;
+
+			// Calcular una posición aleatoria para el botón
+			var nuevaPosicionX = Math.floor(Math.random() * (ventanaAncho - botonAncho));
+			var nuevaPosicionY = Math.floor(Math.random() * (ventanaAlto - botonAlto));
+
+			// Mover el botón a la nueva posición
+			boton.style.left = nuevaPosicionX + "px";
+			boton.style.top = nuevaPosicionY + "px";
+		}
+	</script>
+</body>
+</html>
